@@ -56,7 +56,7 @@ void PIDbaseControl(float target, float waitTime)
 	/*P: Proportional
 	The Proportional component provides the bulk of the power for controlling your
 	system. The key objective is to give a large amount of power when there is a long
-	way to go, but only a small amount of power when you’re nearly at your setpoint.
+	way to go, but only a small amount of power when youâ€™re nearly at your setpoint.
 	This results in a smooth deceleration through the movement as you approach the
 	setpoint.*/
 
@@ -67,7 +67,7 @@ void PIDbaseControl(float target, float waitTime)
 		so:*/
 		error = inchToTicks(target) - (SensorValue[LeftEncoder] + SensorValue[RightEncoder]);
 
-		/*However, you may find that the speed values don’t seem to be scaled right. The
+		/*However, you may find that the speed values donâ€™t seem to be scaled right. The
 		robot may be a bit too gentle approaching the target, and may in fact not have
 		enough power at all to reach the setpoint when the error becomes small. Or
 		alternatively, the robot might be a bit aggressive, and it might significantly
