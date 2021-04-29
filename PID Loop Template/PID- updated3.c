@@ -98,7 +98,7 @@ void PIDbaseControl(float target, float waitTime, float maxPower = 1)
 	/*I: Integral
 	with the proportional component that once the
 	error becomes small you have very little power, and might see some significant
-	remaining error that just isn’t eliminated – the integral will get rid of this for you
+	remaining error that just isnâ€™t eliminated â€“ the integral will get rid of this for you
 	by slowly increasing the speed. The integral is going to be concerned with looking
 	back in time over all the errors your system has calculated.*/
 
@@ -110,7 +110,7 @@ void PIDbaseControl(float target, float waitTime, float maxPower = 1)
 	The idea of the derivative is to look at the rate of change of our error. bit? The contribution from the derivative
 	will be in the direction opposite to your current direction of travel, with a larger
 	magnitude for a greater speed. It typically will be outweighed by the proportional
-	and integral components, but if there’s some deviation from “normal” and the
+	and integral components, but if thereâ€™s some deviation from â€œnormalâ€ and the
 	robot is going faster for some reason, the derivative component will become
 	larger and your output power will be reduced.
 	CALCULUS DEFINITION : slope of the given function on a graph. aka how fast it is going --> velocity = distance/time
@@ -140,7 +140,7 @@ void PIDbaseControl(float target, float waitTime, float maxPower = 1)
 		so:*/
 		error = inchToTicks(target) - (SensorValue[LeftEncoder] + SensorValue[RightEncoder]);
 
-		/*However, you may find that the speed values don’t seem to be scaled right. The
+		/*However, you may find that the speed values donâ€™t seem to be scaled right. The
 		robot may be a bit too gentle approaching the target, and may in fact not have
 		enough power at all to reach the setpoint when the error becomes small. Or
 		alternatively, the robot might be a bit aggressive, and it might significantly
